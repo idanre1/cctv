@@ -4,5 +4,5 @@ https://kerberos.io/
 Install Docker, then use docker compose  
 Apply permissions to mounted volumes:
 ```bash
-chown -r 100:101 agent*
+chown -R 100:101 agent*
 ```
