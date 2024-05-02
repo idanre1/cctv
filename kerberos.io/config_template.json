@@ -8,7 +8,7 @@
 	"auto_clean": "true",
 	"remove_after_upload": "true",
 	"max_directory_size": 20000,
-	"timezone": "Israel/Jerusalem",
+	"timezone": "Asia/Jerusalem",
 	"capture": {
 		"name": "",
 		"ipcamera": {
