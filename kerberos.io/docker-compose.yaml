@@ -9,6 +9,7 @@ services:
       - AGENT_USERNAME=${AGENT1_USERNAME}
       - AGENT_PASSWORD=${AGENT1_PASSWORD}
       - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT1_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT1_CAPTURE_MAXLENGTH}
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
@@ -23,6 +24,7 @@ services:
       - AGENT_USERNAME=${AGENT2_USERNAME}
       - AGENT_PASSWORD=${AGENT2_PASSWORD}
       - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT2_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT2_CAPTURE_MAXLENGTH}
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
@@ -37,6 +39,7 @@ services:
       - AGENT_USERNAME=${AGENT3_USERNAME}
       - AGENT_PASSWORD=${AGENT3_PASSWORD}
       - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT3_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT3_CAPTURE_MAXLENGTH}
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
