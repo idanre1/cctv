@@ -14,3 +14,9 @@ Cons:
 ## SentryShot
 Cons:
 - No ffmpeg digest auth
+## ZoneMinder
+Pros:
+- Mature
+Cons:
+- Problematic installation
+- Never did manage to complete it
