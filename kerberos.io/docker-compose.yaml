@@ -5,7 +5,6 @@ services:
     ports:
       - "8081:80"
     environment:
-      - AGENT_NAME=agent1
       - AGENT_USERNAME=abc
       - AGENT_PASSWORD=abc
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
@@ -18,7 +17,6 @@ services:
     ports:
       - "8082:80"
     environment:
-      - AGENT_NAME=agent2
       - AGENT_USERNAME=abc
       - AGENT_PASSWORD=abc
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
@@ -31,7 +29,6 @@ services:
     ports:
       - "8083:80"
     environment:
-      - AGENT_NAME=agent3
       - AGENT_USERNAME=abc
       - AGENT_PASSWORD=abc
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
