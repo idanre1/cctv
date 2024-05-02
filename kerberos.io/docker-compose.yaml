@@ -13,7 +13,7 @@ services:
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
-      - ./agent1:/home/agent/data/config
+      - ./config:/home/agent/data/config
       - /mnt/c/unmanaged/agent1:/home/agent/data/recordings
   kerberos-agent2:
     image: "kerberos/agent:latest"
@@ -28,7 +28,7 @@ services:
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
-      - ./agent2:/home/agent/data/config
+      - ./config:/home/agent/data/config
       - /mnt/c/unmanaged/agent2:/home/agent/data/recordings
   kerberos-agent3:
     image: "kerberos/agent:latest"
@@ -43,5 +43,5 @@ services:
       # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
-      - ./agent3:/home/agent/data/config
+      - ./config:/home/agent/data/config
       - /mnt/c/unmanaged/agent3:/home/agent/data/recordings
