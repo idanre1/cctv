@@ -1,0 +1,1 @@
+wsl.exe ~/kerberos_io.sh
