@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   kerberos-agent1:
+    restart: always
     image: "kerberos/agent:latest"
     ports:
       - "8081:80"
@@ -16,6 +17,7 @@ services:
       - ./config:/home/agent/data/config
       - /mnt/c/unmanaged/agent1:/home/agent/data/recordings
   kerberos-agent2:
+    restart: always
     image: "kerberos/agent:latest"
     ports:
       - "8082:80"
@@ -31,6 +33,7 @@ services:
       - ./config:/home/agent/data/config
       - /mnt/c/unmanaged/agent2:/home/agent/data/recordings
   kerberos-agent3:
+    restart: always
     image: "kerberos/agent:latest"
     ports:
       - "8083:80"
