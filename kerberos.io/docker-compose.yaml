@@ -14,7 +14,7 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - /mnt/c/unmanaged/agent1:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}agent1:/home/agent/data/recordings
   kerberos-agent2:
     image: "kerberos/agent:latest"
     ports:
@@ -29,7 +29,7 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - /mnt/c/unmanaged/agent2:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}agent2:/home/agent/data/recordings
   kerberos-agent3:
     image: "kerberos/agent:latest"
     ports:
@@ -44,4 +44,4 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - /mnt/c/unmanaged/agent3:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}agent3:/home/agent/data/recordings
