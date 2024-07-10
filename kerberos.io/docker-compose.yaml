@@ -2,8 +2,8 @@ version: "3.9"
 services:
   kerberos-agent1:
     image: "kerberos/agent:latest"
-    ports:
-      - "8081:80"
+    # ports:
+    #   - "8081:80"
     environment:
       - AGENT_NAME=${AGENT1_NAME}
       - AGENT_USERNAME=${AGENT1_USERNAME}
@@ -14,11 +14,11 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - ${OS_PATH_PREFIX}agent1:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}${AGENT1_NAME}:/home/agent/data/recordings
   kerberos-agent2:
     image: "kerberos/agent:latest"
-    ports:
-      - "8082:80"
+    # ports:
+    #   - "8082:80"
     environment:
       - AGENT_NAME=${AGENT2_NAME}
       - AGENT_USERNAME=${AGENT2_USERNAME}
@@ -29,11 +29,11 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - ${OS_PATH_PREFIX}agent2:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}${AGENT2_NAME}:/home/agent/data/recordings
   kerberos-agent3:
     image: "kerberos/agent:latest"
-    ports:
-      - "8083:80"
+    # ports:
+    #   - "8083:80"
     environment:
       - AGENT_NAME=${AGENT3_NAME}
       - AGENT_USERNAME=${AGENT3_USERNAME}
@@ -44,4 +44,49 @@ services:
       # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
     volumes:
       - ./config:/home/agent/data/config
-      - ${OS_PATH_PREFIX}agent3:/home/agent/data/recordings
+      - ${OS_PATH_PREFIX}${AGENT3_NAME}:/home/agent/data/recordings
+  kerberos-agent4:
+    image: "kerberos/agent:latest"
+    # ports:
+    #   - "8084:80"
+    environment:
+      - AGENT_NAME=${AGENT4_NAME}
+      - AGENT_USERNAME=${AGENT4_USERNAME}
+      - AGENT_PASSWORD=${AGENT4_PASSWORD}
+      - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT4_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT4_CAPTURE_MAXLENGTH}
+      # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
+      # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
+    volumes:
+      - ./config:/home/agent/data/config
+      - ${OS_PATH_PREFIX}${AGENT4_NAME}:/home/agent/data/recordings
+  kerberos-agent5:
+    image: "kerberos/agent:latest"
+    # ports:
+    #   - "8085:80"
+    environment:
+      - AGENT_NAME=${AGENT5_NAME}
+      - AGENT_USERNAME=${AGENT5_USERNAME}
+      - AGENT_PASSWORD=${AGENT5_PASSWORD}
+      - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT5_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT5_CAPTURE_MAXLENGTH}
+      # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
+      # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
+    volumes:
+      - ./config:/home/agent/data/config
+      - ${OS_PATH_PREFIX}${AGENT5_NAME}:/home/agent/data/recordings
+  kerberos-agent6:
+    image: "kerberos/agent:latest"
+    # ports:
+    #   - "8086:80"
+    environment:
+      - AGENT_NAME=${AGENT6_NAME}
+      - AGENT_USERNAME=${AGENT6_USERNAME}
+      - AGENT_PASSWORD=${AGENT6_PASSWORD}
+      - AGENT_CAPTURE_IPCAMERA_RTSP=${AGENT6_CAPTURE_IPCAMERA_RTSP}
+      - AGENT_CAPTURE_MAXLENGTH=${AGENT6_CAPTURE_MAXLENGTH}
+      # You can still override the configuration with environment variables, but might not makes sense if you are attaching a host config.
+      # find full list of environment variables here: https://github.com/kerberos-io/agent#override-with-environment-variables
+    volumes:
+      - ./config:/home/agent/data/config
+      - ${OS_PATH_PREFIX}${AGENT6_NAME}:/home/agent/data/recordings
